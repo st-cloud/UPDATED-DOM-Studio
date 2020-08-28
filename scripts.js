@@ -1,8 +1,5 @@
 //still have to finish 5a, moving rocket image around
 
-
-// Write your JavaScript code here.
-// Remember to pay attention to page loading!
 let verticalMove = 0;
 let horizontalMove = 0;
 
@@ -75,38 +72,39 @@ window.addEventListener('load', function(){
     // verticalMove = document.getElementById("rocket").style.top;
     // horizontalMove = document.getElementById("rocket").style.left;
 
-    // for (let i = 0; i < allButtons.length; i++) {
-    //     if (allButtons[i].innerHTML.includes("Up")) {
-    //         upButton = allButtons[i];
-    //     }
-    //     else if (allButtons[i].innerHTML.includes("Down")) {
-    //         downButton = allButtons[i];
-    //     }
-    // }
+    //^ Can I do that even though top and left are not defined in index.html?
 
     //part a: The rocket image should move 10 px in the direction of the button that was clicked.
     upButton.addEventListener('click', function(){
         console.log("clicked up");
         shuttleHeight += 10000;
         height.innerHTML = shuttleHeight;
+        
         verticalMove += 10;
-        rocket.style.top = horizontalMove + 'px';
+        rocket.style.top = verticalMove + 'px';
     })
 
     downButton.addEventListener('click', function(){
         console.log("clicked down");
         shuttleHeight -= 10000;
         height.innerHTML = shuttleHeight;
+        
         verticalMove -= 10;
         rocket.style.top = verticalMove + 'px';
     })
 
     rightButton.addEventListener('click', function(){
         console.log("clicked right");
+
+        horizontalMove += 10;
+        rocket.style.left = horizontalMove + 'px';
     })
 
     leftButton.addEventListener('click', function(){
         console.log("clicked left");
+
+        horizontalMove -= 10;
+        rocket.style.left = horizontalMove + 'px';
     })
 
 })
