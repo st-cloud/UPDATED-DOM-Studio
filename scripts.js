@@ -42,6 +42,9 @@ window.addEventListener('load', function(){
     
             shuttleHeight = 0;
             height.innerHTML = shuttleHeight;
+
+            rocket.style.top = '';
+            rocket.style.left = '';
         }
     })
 
@@ -59,6 +62,9 @@ window.addEventListener('load', function(){
 
             shuttleHeight = 0;
             height.innerHTML = shuttleHeight;
+
+            rocket.style.top = '';
+            rocket.style.left = '';
         }
     })
 
@@ -80,7 +86,7 @@ window.addEventListener('load', function(){
         shuttleHeight += 10000;
         height.innerHTML = shuttleHeight;
         
-        verticalMove += 10;
+        verticalMove -= 10;
         rocket.style.top = verticalMove + 'px';
     })
 
@@ -89,7 +95,7 @@ window.addEventListener('load', function(){
         shuttleHeight -= 10000;
         height.innerHTML = shuttleHeight;
         
-        verticalMove -= 10;
+        verticalMove += 10;
         rocket.style.top = verticalMove + 'px';
     })
 
